@@ -1,12 +1,15 @@
 class LampakModell {
     #list = [];
     constructor() {
+        this.feltoltLista();
+    }
+
+    feltoltLista() {
         for (let index = 0; index < 9; index++) {
             let szam = Math.floor(Math.random() * 2);
             this.#list[index] = szam;
         }
     }
-
     getList() {
         return this.#list;
     }

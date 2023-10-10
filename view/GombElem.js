@@ -6,7 +6,6 @@ class GombElem {
         this.#gombMegjelenit();
 
         this.#gombElem = this.#szuloElem.children("button");
-        this.pElem = this.#szuloElem.children("p");
         this.#gombElem.on("click", () => {
             this.#kattintasTrigger("ujraIndit");
         });

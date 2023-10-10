@@ -17,9 +17,8 @@ class Controller {
 
         $(window).on("ujraIndit", (event) => {
             $(".lighton").empty();
+            LAMPAKMODELL.feltoltLista();
             new Lampak($(".lighton"), LAMPAKMODELL.getList());
-            new LampakModell();
-            
             
         });
     }
