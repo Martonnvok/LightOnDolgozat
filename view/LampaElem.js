@@ -4,21 +4,23 @@ class LampaElem {
     allapot;
     #divElem;
     constructor(szuloElem, allapot, index) {
-        
         this.#szuloElem = szuloElem;
         this.allapot = allapot;
         this.index = index;
-        this.#megjelenit();
+        this.#megjelenitLampa();
+        
 
 
         this.#divElem = this.#szuloElem.children("div:last-child");
         this.#divElem.on("click", () => {
             this.#kattintasTrigger("szintValt");
         });
+
+        
     }
 
-    #megjelenit() {
-        let txt =  `<div id=${this.i} style="${this.#szinBeallit(this.allapot)}"> </div>`;
+    #megjelenitLampa() {
+        let txt =  `<div id=${this.index} class="elemek" style="${this.#szinBeallit(this.allapot)}"> </div>`;
         this.#szuloElem.append(txt);
     }
 
