@@ -13,6 +13,12 @@ class Controller {
             $(".lighton").empty();
             LAMPAKMODELL.szomszedokKeresese(event.detail.index);
             new Lampak($(".lighton"), LAMPAKMODELL.getList());
+        });
+
+        $(window).on("ujraIndit", (event) => {
+            $(".lighton").empty();
+            new Lampak($(".lighton"), LAMPAKMODELL.getList());
+            new LampakModell();
             
             
         });

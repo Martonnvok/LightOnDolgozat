@@ -4,7 +4,7 @@ class GombElem {
     constructor(szuloElem) {
         this.#szuloElem = szuloElem;
         this.#gombMegjelenit();
-        
+
         this.#gombElem = this.#szuloElem.children("button");
         this.pElem = this.#szuloElem.children("p");
         this.#gombElem.on("click", () => {
@@ -13,7 +13,7 @@ class GombElem {
     }
 
     #gombMegjelenit() {
-        let txt = `<button class="ujraInditt">Restart</button>`;
+        let txt = `<button class="ujraIndit">Restart</button>`;
         this.#szuloElem.append(txt);
     }
     #kattintasTrigger(esemenyNev) {
